@@ -1,13 +1,11 @@
-import React from 'react';
+import React from "react";
 
-
-const KimQuotedashian = ({quote}) => {
-
-return (
+const KimQuotedashian = ({ quote }) => {
+  return (
     <h2 className="gradient-multiline">
-    <span>"{quote}"</span></h2>
-
-)
-}
+      <span>"{quote}"</span>
+    </h2>
+  );
+};
 
 export default KimQuotedashian;
