@@ -2,9 +2,14 @@ import React from "react";
 
 const KimQuotedashian = ({ quote }) => {
   return (
-    <h2 className="gradient-multiline">
-      <span>"{quote}"</span>
-    </h2>
+    <div>
+      <h2 className="gradient-multiline">
+        <span style={{ color: "white" }}>"{quote}"</span>
+      </h2>
+      <h3 style={{ color: "white", marginRight: "100px" }}>
+        - Kanye West
+      </h3>
+    </div>
   );
 };
 

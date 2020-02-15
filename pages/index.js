@@ -24,24 +24,23 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div
+      style={{
+        position: "fixed",
+        top: "0",
+        left: "0",
+        width: "100%",
+        height: "100%",
+        backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(${imageUrl})`,
+        backgroundSize: "cover"
+      }}
+    >
+      <img src={imageUrl} onLoad={() => setLoading(false)} style={{visibility: 'hidden', position: 'fixed'}}/>
       {loading && <LoadingScreen />}
       <div>
         <KimQuotedashian quote={quote} />
-        <img
-          onLoad={() => setLoading(false)}
-          src={imageUrl}
-          style={{
-            position: "fixed",
-            objectFit: "cover",
-            top: "0",
-            left: "0",
-            width: "100%",
-            zIndex: -1
-          }}
-        />
+        <button onClick={handleKanye}>Handle</button>
       </div>
-      <button onClick={handleKanye}>Handle</button>
     </div>
   );
 };
