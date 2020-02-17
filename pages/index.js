@@ -53,6 +53,8 @@ const Home = () => {
       >
       <KimQuotedashian quote={quote} color={yeColor} />
       <HandlerButton onClick={handleKanye} />
+      <p style={{fontStyle: 'italic', color: 'white', bottom: 0, textAlign: 'center'}}>credits Unsplash by {yeetUser}</p>
+
       </div>
 
         }

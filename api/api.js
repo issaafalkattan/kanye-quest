@@ -15,7 +15,12 @@ export const getKanyefied = quote => {
     .then(myJson => {
         console.log(myJson);
       return {url : myJson.urls.full, color : myJson.color, user : myJson.user.name};
-    });
+    }).catch(() =>   {
+
+      return {
+        url: './roolbackImage.jpg', user: 'Cognite AS'
+      }
+    })
 };
 
 export const getQuote = () => {

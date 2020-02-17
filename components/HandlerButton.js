@@ -6,13 +6,13 @@ const HandlerButton = ({ onClick }) => {
         <Button className="coolio" onClick={onClick} type="primary">
            HANDLE KANYE
            <style>{`
-           .coolio{
+           .coolio
+           {
             background : black;
             border: 1px solid white;
             width: 200px;
              height: 60px;
              font-weight: bold;
-
            }
            .coolio:hover{
              color : black;
