@@ -1,16 +1,20 @@
 const unsplashAccessKey = process.env.UNSPLASH_KEY;
+var keyword_extractor = require("keyword-extractor");
 
+console.log(process.env)
 
-export const getImageUrl = quote => {
+export const getKanyefied = quote => {
+  let keywords = keyword_extractor.extract(quote);
   return fetch(
-    `https://api.unsplash.com/photos/random?query=${quote.split(" ")[0]}`,
+    `https://api.unsplash.com/photos/random?query=${keywords[0]}&orientation=landscape`,
     { headers: { Authorization: `Client-ID ${unsplashAccessKey}` } }
   )
     .then(response => {
       return response.json();
     })
     .then(myJson => {
-      return myJson.urls.full;
+        console.log(myJson);
+      return {url : myJson.urls.full, color : myJson.color, user : myJson.user.name};
     });
 };
 
