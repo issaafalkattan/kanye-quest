@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "antd": "^3.26.9",
+    "dom-to-image": "^2.6.0",
     "dotenv": "^8.2.0",
     "keyword-extractor": "0.0.18",
     "next": "9.2.1",

@@ -4,8 +4,8 @@ import Button from 'antd/lib/button';
 const HandlerButton = ({ onClick }) => {
     return (
         <Button className="coolio" onClick={onClick} type="primary">
-           HANDLE KANYE
-           <style>{`
+            HANDLE KANYE
+            <style>{`
            .coolio
            {
             background : black;

@@ -1,8 +1,20 @@
 import React from "react";
 
-const KimQuotedashian = ({ quote, color }) => {
+const KimQuotedashian = ({ quote, color, from, to }) => {
   return (
     <div style={{ textAlign: 'center', fontSize: '34px' }}>
+
+      <p className="signature">
+        {from && <>
+          From: {from}</>
+        }
+        {' '}
+        {to && <>
+          to: {to}</>
+        }
+      </p>
+
+
       <h2 className="qoute" >
         <span style={{ color: "white" }}>{quote}</span>
       </h2>
@@ -21,8 +33,9 @@ const KimQuotedashian = ({ quote, color }) => {
     width: 60%;
     text-align: center;
     margin: auto;
-    margin-top: 20%;
+    margin-top: 10%;
     quotes: "\\201C""\\201D""\\2018""\\2019";
+    word-break: break-word; 
 
    }
    .qoute:before {
@@ -52,7 +65,7 @@ const KimQuotedashian = ({ quote, color }) => {
     color: white;
   }
       `}
- </style>
+      </style>
     </div>)
 
 };
