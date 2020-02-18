@@ -27,9 +27,6 @@ const Home = () => {
     });
   };
 
-  useEffect(() => {
-    handleKanye();
-  }, []);
 
   if(shareWindowVisible) 
   return (
